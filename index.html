@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahbubur Rahman | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+    text-align:center;
+}
+
+nav{
+    background:#333;
+    padding:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:#4CAF50;
+}
+
+.hero{
+    padding:40px 20px;
+}
+
+.slider img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:5px solid #4CAF50;
+    transition:.5s;
+}
+
+.slider img:hover{
+    transform:scale(1.08);
+}
+
+#typing{
+    font-size:22px;
+    margin:15px;
+    font-weight:bold;
+    color:#555;
+}
+
+#clock{
+    font-size:18px;
+    color:blue;
+    margin:10px;
+}
+
+section{
+    width:90%;
+    max-width:700px;
+    margin:30px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+h2{
+    color:#4CAF50;
+    margin-bottom:15px;
+}
+
+.skill{
+    display:inline-block;
+    background:#4CAF50;
+    color:white;
+    padding:10px 18px;
+    margin:8px;
+    border-radius:20px;
+}
+
+button{
+    background:#4CAF50;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+    margin:10px;
+}
+
+button:hover{
+    background:#2e7d32;
+}
+
+input, textarea{
+    width:90%;
+    max-width:450px;
+    padding:10px;
+    margin:10px;
+    border:1px solid #999;
+    border-radius:8px;
+}
+
+.dark{
+    background:#222;
+    color:white;
+}
+
+.dark section{
+    background:#333;
+    color:white;
+}
+
+.dark #typing{
+    color:white;
+}
+
+#topBtn{
+    display:none;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    padding:15px;
+    border-radius:50%;
+}
+
+footer{
+    background:#222;
+    color:white;
+    padding:20px;
+    margin-top:40px;
+}
+
+.social a{
+    display:inline-block;
+    margin:10px;
+    text-decoration:none;
+    color:#4CAF50;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+    <h1>Mahbubur Rahman</h1>
+    <p id="clock"></p>
+    <p id="typing"></p>
+
+    <div class="slider">
+        <img id="slider" src="css/mahbub.png" alt="Profile">
+    </div>
+
+    <button onclick="document.getElementById('contact').scrollIntoView()">
+        Contact Me
+    </button>
+</div>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Assalamu Alaikum! I am Mahbubur Rahman.
+        I am a Mathematics Teacher, Quran Teacher, and Web Developer.
+        I love teaching and helping students learn Mathematics and the Holy Quran.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Mathematics</div>
+    <div class="skill">Quran Teaching</div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>My personal portfolio website built with HTML, CSS and JavaScript.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Quran Learning Website</h3>
+        <p>A website for teaching the Holy Quran online.</p>
+    </div>
+
+    <div class="project-card">
+        <h3>Math Learning Website</h3>
+        <p>A website for helping students learn Mathematics.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <button onclick="darkMode()">🌙 Dark Mode</button>
+
+    <a href="css/mahbub.png" download>
+        <button>Download CV</button>
+    </a>
+
+    <p><strong>Email:</strong> muntafiaakon@gmail.com</p>
+    <p><strong>Phone:</strong> +8801775374905</p>
+
+<form action="https://formspree.io/f/xgogkyvl" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+    <div class="social">
+        <h3>Follow Me</h3>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Mahbubur Rahman | All Rights Reserved</p>
+</footer>
+
+<button id="topBtn" onclick="topFunction()">⬆️</button>
+
+<script>
+
+// Typing Animation
+const text = "Mathematics Teacher | Quran Teacher | Web Developer";
+let i = 0;
+
+function typeWriter(){
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter,80);
+    }
+}
+typeWriter();
+
+// Live Clock
+function showClock(){
+    let now = new Date();
+    document.getElementById("clock").innerHTML = now.toLocaleString();
+}
+setInterval(showClock,1000);
+showClock();
+
+// Dark Mode
+function darkMode(){
+    document.body.classList.toggle("dark");
+}
+
+// Form Validation
+
+// Scroll To Top
+window.onscroll = function(){
+    if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+        document.getElementById("topBtn").style.display = "block";
+    }else{
+        document.getElementById("topBtn").style.display = "none";
+    }
+};
+
+function topFunction(){
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+// Image Slider
+let images = [
+    
+    "css/mahbub.png"
+];
+
+let index = 0;
+
+setInterval(function(){
+    index++;
+    if(index >= images.length){
+        index = 0;
+    }
+    document.getElementById("slider").src = images[index];
+},3000);
+
+</script>
+</body>
+</html>
