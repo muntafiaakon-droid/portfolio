@@ -41,11 +41,22 @@ nav a{
 nav a:hover{
     color:#4CAF50;
 }
-
 .hero{
+    width:90%;
+    max-width:700px;
+    margin:30px auto;
     padding:40px 20px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
 }
-
+.hero img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid #4CAF50;
+    object-fit:cover;
+}
 .slider img{
     width:220px;
     height:220px;
@@ -62,15 +73,19 @@ nav a:hover{
     font-size:22px;
     margin:15px;
     font-weight:bold;
-    color:#555;
+    color:#4CAF50;
 }
-
 #clock{
-    font-size:18px;
-    color:blue;
-    margin:10px;
+    display:inline-block;
+    background:#007bff;
+    color:white;
+    padding:12px 20px;
+    border-radius:12px;
+    font-size:28px;
+    font-weight:bold;
+    margin:20px 0;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
 }
-
 section{
     width:90%;
     max-width:700px;
@@ -84,15 +99,6 @@ section{
 h2{
     color:#4CAF50;
     margin-bottom:15px;
-}
-
-.skill{
-    display:inline-block;
-    background:#4CAF50;
-    color:white;
-    padding:10px 18px;
-    margin:8px;
-    border-radius:20px;
 }
 
 button{
@@ -156,6 +162,88 @@ footer{
     color:#4CAF50;
     font-weight:bold;
 }
+h2{
+    color: #333;
+}
+
+#clock{
+    font-size: 50px;
+    color: white;
+    background: #007bff;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#result{
+    margin: 20px auto;
+    width: 250px;
+    padding: 15px;
+    background: #0d6efd;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+button{
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+.skill{
+    width: 90%;
+    height: 25px;
+    background: #ddd;
+    border-radius: 20px;
+    margin: 10px auto 20px;
+    overflow: hidden;
+}
+
+.fill{
+    width: 0%;
+    height: 100%;
+    background: #28a745;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.fill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+}
+.project-card{
+    background:#f9f9f9;
+    border-left:5px solid #4CAF50;
+    padding:20px;
+    margin:15px 0;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
 </style>
 </head>
 
@@ -167,20 +255,19 @@ footer{
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
+<section class="hero">
 
-<div class="hero">
+    <img id="slider" src="css/mahbub.png" alt="Profile">
+
     <h1>Mahbubur Rahman</h1>
-    <p id="clock"></p>
+
     <p id="typing"></p>
 
-    <div class="slider">
-        <img id="slider" src="css/mahbub.png" alt="Profile">
-    </div>
+    <p id="clock"></p>
 
     <button onclick="document.getElementById('contact').scrollIntoView()">
         Contact Me
     </button>
-</div>
 
 <section id="about">
     <h2>About Me</h2>
@@ -190,33 +277,42 @@ footer{
         I love teaching and helping students learn Mathematics and the Holy Quran.
     </p>
 </section>
-
 <section id="skills">
-    <h2>My Skills</h2>
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Mathematics</div>
-    <div class="skill">Quran Teaching</div>
+<h2>My Skills</h2>
+
+<p>HTML</p>
+<div class="skill">
+    <div id="htmlSkill" class="fill">0%</div>
+</div>
+
+<p>CSS</p>
+<div class="skill">
+    <div id="cssSkill" class="fill">0%</div>
+</div>
+
+<p>JavaScript</p>
+<div class="skill">
+    <div id="jsSkill" class="fill">0%</div>
+</div>
 </section>
 
 <section id="projects">
     <h2>My Projects</h2>
 
-    <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>My personal portfolio website built with HTML, CSS and JavaScript.</p>
-    </div>
+<div class="project-card">
+    <h3>🌐 Portfolio Website</h3>
+    <p>Personal portfolio built with HTML, CSS & JavaScript.</p>
+</div>
 
-    <div class="project-card">
-        <h3>Quran Learning Website</h3>
-        <p>A website for teaching the Holy Quran online.</p>
-    </div>
+<div class="project-card">
+    <h3>📖 Quran Learning Website</h3>
+    <p>Online platform for teaching the Holy Quran.</p>
+</div>
 
-    <div class="project-card">
-        <h3>Math Learning Website</h3>
-        <p>A website for helping students learn Mathematics.</p>
-    </div>
+<div class="project-card">
+    <h3>📐 Math Learning Website</h3>
+    <p>Website for helping students learn Mathematics.</p>
+</div>
 </section>
 
 <section id="contact">
@@ -250,13 +346,33 @@ footer{
         <a href="https://github.com" target="_blank">GitHub</a>
     </div>
 </section>
-
+<h2 id="quote">Click the button</h2>
+<button onclick="newQuote()">New Quote</button>
 <button onclick="welcome()">say hello</button>
+<textarea id="note" rows="6" cols="30"></textarea>
+<br>
+<button onclick="saveNote()">Save</button>
+  <input type="number" id="num">
+<br><br>
+<button onclick="square()">x²</button>
+<button onclick="sqrt()">√x</button>
+<input type="number" id="num1" placeholder="First Number">
+<br><br>
+
+<input type="number" id="num2" placeholder="Second Number">
+<br><br>
+
+<button onclick="add()">+</button>
+<button onclick="sub()">-</button>
+<button onclick="mul()">×</button>
+<button onclick="div()">÷</button>
+
+<h2 id="result"></h2>
+  
+<button id="topBtn" onclick="topFunction()">⬆️</button>
 <footer>
     <p>© 2026 Mahbubur Rahman | All Rights Reserved</p>
 </footer>
-
-<button id="topBtn" onclick="topFunction()">⬆️</button>
 
 <script>
 
@@ -276,7 +392,8 @@ typeWriter();
 // Live Clock
 function showClock(){
     let now = new Date();
-    document.getElementById("clock").innerHTML = now.toLocaleString();
+   document.getElementById("clock").innerHTML =
+now.toLocaleDateString() + " " + now.toLocaleTimeString();
 }
 setInterval(showClock,1000);
 showClock();
@@ -326,8 +443,82 @@ setInterval(function(){
 function welcome() {
   alert("Welcome to My Portfolio");
 }
+let quotes = [
+  "Never give up.",
+  "Success needs hard work.",
+  "Practice makes perfect.",
+  "Believe in yourself."
+];
 
+function newQuote() {
+  let random = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").innerHTML = quotes[random];
+}
+document.getElementById("note").value =
+localStorage.getItem("note") || "";
 
+function saveNote() {
+  localStorage.setItem(
+    "note",
+    document.getElementById("note").value
+  );
+  alert("Note Saved!");
+}
+function square() {
+  let n = Number(document.getElementById("num").value);
+  document.getElementById("result").innerHTML = n * n;
+}
+
+function sqrt() {
+  let n = Number(document.getElementById("num").value);
+  document.getElementById("result").innerHTML = Math.sqrt(n);
+}
+function add() {
+  let a = Number(document.getElementById("num1").value);
+  let b = Number(document.getElementById("num2").value);
+  document.getElementById("result").innerHTML = "Result = " + (a + b);
+}
+
+function sub() {
+  let a = Number(document.getElementById("num1").value);
+  let b = Number(document.getElementById("num2").value);
+  document.getElementById("result").innerHTML = "Result = " + (a - b);
+}
+
+function mul() {
+  let a = Number(document.getElementById("num1").value);
+  let b = Number(document.getElementById("num2").value);
+  document.getElementById("result").innerHTML = "Result = " + (a * b);
+}
+
+function div() {
+  let a = Number(document.getElementById("num1").value);
+  let b = Number(document.getElementById("num2").value);
+
+  if (b === 0) {
+    document.getElementById("result").innerHTML = "০ দিয়ে ভাগ করা যায় না";
+  } else {
+    document.getElementById("result").innerHTML = "Result = " + (a / b);
+  }
+}
+function animateSkill(id, percent){
+    let value = 0;
+    let bar = document.getElementById(id);
+
+    let interval = setInterval(function(){
+        if(value >= percent){
+            clearInterval(interval);
+        }else{
+            value++;
+            bar.style.width = value + "%";
+            bar.innerHTML = value + "%";
+        }
+    }, 20);
+}
+
+animateSkill("htmlSkill", 95);
+animateSkill("cssSkill", 90);
+animateSkill("jsSkill", 75);
 </script>
 </body>
 </html>
