@@ -154,13 +154,6 @@ footer{
     margin-top:40px;
 }
 
-.social a{
-    display:inline-block;
-    margin:10px;
-    text-decoration:none;
-    color:#4CAF50;
-    font-weight:bold;
-}
 h2{
     color: #333;
 }
@@ -303,6 +296,66 @@ button:hover{
     text-decoration:none;
     border-radius:8px;
 }
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.social-links a{
+    text-decoration:none;
+    color:white;
+    padding:10px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.facebook{
+    background:#1877F2;
+}
+
+.github{
+    background:#24292e;
+}
+
+.linkedin{
+    background:#0A66C2;
+}
+
+.social-links a:hover{
+    transform:translateY(-3px);
+    opacity:0.9;
+}
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:40px 0;
+}
+
+.stat-box{
+    width:180px;
+    background:#ffffff;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stat-box h2{
+    color:#0077cc;
+    margin:0;
+    font-size:32px;
+}
+
+.stat-box p{
+    margin-top:10px;
+    font-size:16px;
+}
 </style>
 </head>
 
@@ -336,8 +389,23 @@ button:hover{
         আমি হাফেজ মাহবুবুর রহমান। আমি গণিত ও কুরআন শিক্ষা নিয়ে কাজ করি।
         এই ওয়েবসাইটে নবম-দশম শ্রেণির গণিত, পরীক্ষার প্রস্তুতি, গুরুত্বপূর্ণ নোট এবং শিক্ষামূলক আর্টিকেল প্রকাশ করা হয়।
     </p>
-
     <a href="#blog" class="btn">📚 সকল আর্টিকেল দেখুন</a>
+</section>
+<section class="stats">
+    <div class="stat-box">
+        <h2>10+</h2>
+        <p>Years Teaching</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>1000+</h2>
+        <p>Students</p>
+    </div>
+
+    <div class="stat-box">
+        <h2>20+</h2>
+        <p>Articles</p>
+    </div>
 </section>
 <section id="skills">
 <h2>My Skills</h2>
@@ -405,12 +473,12 @@ button:hover{
 <button type="submit">Send Message</button>
 
 </form>
-<div class="social-links">
-  <a href="https://www.facebook.com/profile.php?id=100005846852298" target="_blank">Facebook</a>
+  <div class="social-links">
+    <a href="https://www.facebook.com/foujiya.foujiya" target="_blank" class="facebook">Facebook</a>
 
-  <a href="https://github.com/muntafiaakon-droid" target="_blank">GitHub</a>
+    <a href="https://github.com/muntafiaakon-droid" target="_blank" class="github">GitHub</a>
 
-  <a href="https://www.linkedin.com/in/mahbubur-rahman-akon-b5a2492a1" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/mahbubur-rahman-akon-b5a2492a1" target="_blank" class="linkedin">LinkedIn</a>
 </div>
 </section>
 <h2 id="quote">Click the button</h2>
