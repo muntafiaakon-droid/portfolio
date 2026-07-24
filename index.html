@@ -24,18 +24,17 @@ body{
 }
 
 nav{
-    background:#333;
-    padding:15px;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-size:18px;
+    color: #2196F3;
+    text-decoration: none;
+    font-size: 18px;
 }
 
 nav a:hover{
@@ -252,6 +251,58 @@ button:hover{
 #contact strong{
     color:#4CAF50;
 }
+.linkedin{
+    background:#0077B5;
+    color:white;
+}
+#blog{
+    padding:40px 20px;
+    background:#f8f9fa;
+}
+
+.post{
+    background:white;
+    padding:20px;
+    margin:20px auto;
+    max-width:700px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post h3{
+    color:#0077cc;
+}
+
+.post a{
+    text-decoration:none;
+    color:#009688;
+    font-weight:bold;
+}
+.welcome{
+    max-width:800px;
+    margin:40px auto;
+    padding:20px;
+    text-align:center;
+}
+
+.welcome h2{
+    color:#0077cc;
+}
+
+.welcome p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.welcome .btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#0077cc;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
 </style>
 </head>
 
@@ -261,6 +312,7 @@ button:hover{
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
 </nav>
 <section class="hero">
@@ -277,13 +329,15 @@ button:hover{
         Contact Me
     </button>
 
-<section id="about">
-    <h2>About Me</h2>
+<section class="welcome">
+    <h2>Welcome to My Educational Website</h2>
+
     <p>
-        Assalamu Alaikum! I am Mahbubur Rahman.
-        I am a Mathematics Teacher, Quran Teacher, and Web Developer.
-        I love teaching and helping students learn Mathematics and the Holy Quran.
+        আমি হাফেজ মাহবুবুর রহমান। আমি গণিত ও কুরআন শিক্ষা নিয়ে কাজ করি।
+        এই ওয়েবসাইটে নবম-দশম শ্রেণির গণিত, পরীক্ষার প্রস্তুতি, গুরুত্বপূর্ণ নোট এবং শিক্ষামূলক আর্টিকেল প্রকাশ করা হয়।
     </p>
+
+    <a href="#blog" class="btn">📚 সকল আর্টিকেল দেখুন</a>
 </section>
 <section id="skills">
 <h2>My Skills</h2>
@@ -331,7 +385,9 @@ button:hover{
     <a href="css/mahbub.png" download>
         <button>Download CV</button>
     </a>
-
+<a href="https://wa.me/8801775374905" target="_blank">
+    <button>WhatsApp</button>
+</a>
 <p>📧 <strong>Email:</strong> muntafiaakon@gmail.com</p>
 
 <p>📱 <strong>Phone:</strong> +8801775374905</p>
@@ -349,13 +405,13 @@ button:hover{
 <button type="submit">Send Message</button>
 
 </form>
+<div class="social-links">
+  <a href="https://www.facebook.com/profile.php?id=100005846852298" target="_blank">Facebook</a>
 
-    <div class="social">
-        <h3>Follow Me</h3>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://github.com" target="_blank">GitHub</a>
-    </div>
+  <a href="https://github.com/muntafiaakon-droid" target="_blank">GitHub</a>
+
+  <a href="https://www.linkedin.com/in/mahbubur-rahman-akon-b5a2492a1" target="_blank">LinkedIn</a>
+</div>
 </section>
 <h2 id="quote">Click the button</h2>
 <button onclick="newQuote()">New Quote</button>
@@ -381,7 +437,25 @@ button:hover{
 <h2 id="result"></h2>
   
 <button id="topBtn" onclick="topFunction()">⬆️</button>
+<section id="blog">
+    <h2>Latest Articles</h2>
+
+    <div class="post">
+        <h3>Class 9 Algebra - Chapter 1</h3>
+        <p>এই আর্টিকেলে নবম শ্রেণির বীজগণিতের মৌলিক ধারণা, সূত্র এবং উদাহরণ আলোচনা করা হয়েছে।</p>
+        <a href="algebra-chapter-1.html">Read More</a>
+    </div>
+
+    <div class="post">
+        <h3>SSC Math Suggestion 2026</h3>
+        <p>এসএসসি গণিত পরীক্ষার গুরুত্বপূর্ণ অধ্যায় ও প্রস্তুতির নির্দেশনা।</p>
+        <a href="algebra-chapter-2.html">Read More</a>
+    </div>
+</section>
 <footer>
+  <a href="terms.html">Terms & Conditions</a>
+  <a href="about.html">About</a>
+  <a href="privacy.html">Privacy Policy</a>
     <p>© 2026 Mahbubur Rahman | All Rights Reserved</p>
 </footer>
 
