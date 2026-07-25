@@ -22,19 +22,22 @@ body{
     color:#333;
     text-align:center;
 }
-
 nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    flex-wrap: nowrap;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 nav a{
+    width: 100px;
+    text-align: center;
     color: #2196F3;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 nav a:hover{
@@ -356,6 +359,61 @@ button:hover{
     margin-top:10px;
     font-size:16px;
 }
+.certificates{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+    text-align:center;
+}
+
+.certificates h2{
+    color:#0077cc;
+    margin-bottom:25px;
+}
+
+.certificate-box{
+    background:#fff;
+    margin:15px auto;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    max-width:500px;
+    transition:0.3s;
+}
+
+.certificate-box:hover{
+    transform:translateY(-5px);
+}
+
+.certificate-box h3{
+    color:#4CAF50;
+    margin-bottom:10px;
+}
+
+.certificate-box p{
+    color:#555;
+}
+.testimonials{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+    text-align:center;
+}
+
+.review{
+    background:#fff;
+    padding:20px;
+    margin:20px auto;
+    border-left:5px solid #4CAF50;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    max-width:700px;
+}
+
+.review h4{
+    color:#0077cc;
+    margin-top:15px;
+}
 </style>
 </head>
 
@@ -367,6 +425,8 @@ button:hover{
     <a href="#projects">Projects</a>
     <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#testimonials">Reviews</a>
 </nav>
 <section class="hero">
 
@@ -424,6 +484,41 @@ button:hover{
 <div class="skill">
     <div id="jsSkill" class="fill">0%</div>
 </div>
+</section>
+<section id="certificates" class="certificates">
+    <h2>🏆 My Certificates</h2>
+
+    <div class="certificate-box">
+        <h3>M.Sc. in Mathematics</h3>
+        <p>National University</p>
+    </div>
+
+    <div class="certificate-box">
+        <h3>B.Ed.</h3>
+        <p>Professional Teacher Training</p>
+    </div>
+
+    <div class="certificate-box">
+        <h3>ICT Diploma</h3>
+        <p>One-Year Computer Training</p>
+    </div>
+
+    <div class="certificate-box">
+        <h3>Hifzul Quran</h3>
+        <p>Completed Hifz of the Holy Quran</p>
+    </div>
+    <section id="testimonials" class="testimonials">
+    <h2>Student Reviews</h2>
+
+    <div class="review">
+        <p>"স্যারের ক্লাস খুব সহজ ও সুন্দর। গণিত এখন অনেক সহজ লাগে।"</p>
+        <h4>— SSC Student</h4>
+    </div>
+
+    <div class="review">
+        <p>"কুরআন শিক্ষা খুব সুন্দরভাবে বুঝিয়ে পড়ান।"</p>
+        <h4>— Quran Student</h4>
+    </div>
 </section>
 
 <section id="projects">
