@@ -828,11 +828,13 @@ localStorage.setItem("visitors", visitors);
 
 document.getElementById("visitorCount").innerHTML = visitors;
 </script>
-<script type="module" src="firebase.js"
+<script>
 let count = localStorage.getItem("visitor") || 0;
 count++;
 localStorage.setItem("visitor", count);
 document.getElementById("visitor").innerHTML = count;
 </script>
+
+<script type="module" src="firebase.js"></script>
 </body>
 </html>
