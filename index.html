@@ -414,6 +414,23 @@ button:hover{
     color:#0077cc;
     margin-top:15px;
 }
+article{
+    font-size: 20px;
+    line-height: 1.8;
+    padding: 20px;
+}
+
+article p{
+    font-size: 20px;
+}
+
+article h1{
+    font-size: 36px;
+}
+
+article h2{
+    font-size: 36px;
+}
 </style>
 </head>
 
@@ -441,6 +458,17 @@ button:hover{
     <button onclick="document.getElementById('contact').scrollIntoView()">
         Contact Me
     </button>
+     </section>
+     <section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        Assalamu Alaikum. I am <strong>Mahbubur Rahman</strong>,
+        a Mathematics Teacher and Quran Teacher.
+        I have more than 10 years of teaching experience.
+        My goal is to make Mathematics and Quran learning easy for every student.
+    </p>
+</section>
 
 <section class="welcome">
     <h2>Welcome to My Educational Website</h2>
@@ -506,8 +534,9 @@ button:hover{
     <div class="certificate-box">
         <h3>Hifzul Quran</h3>
         <p>Completed Hifz of the Holy Quran</p>
-    </div>
-    <section id="testimonials" class="testimonials">
+        </div>
+        </section>
+        <section id="testimonials" class="testimonials">
     <h2>Student Reviews</h2>
 
     <div class="review">
@@ -519,7 +548,29 @@ button:hover{
         <p>"কুরআন শিক্ষা খুব সুন্দরভাবে বুঝিয়ে পড়ান।"</p>
         <h4>— Quran Student</h4>
     </div>
-</section>
+
+    <div id="reviewList"></div>
+
+    <form id="reviewForm">
+     
+        <input type="text" id="name" placeholder="আপনার নাম" required>
+        <label>Rating:</label><br>
+
+<select id="rating" required>
+    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+    <option value="⭐⭐⭐">⭐⭐⭐</option>
+    <option value="⭐⭐">⭐⭐</option>
+    <option value="⭐">⭐</option>
+</select>
+
+<br><br>
+
+        <textarea id="review"
+        placeholder="আপনার মতামত লিখুন"required></textarea>
+        <button type="submit">Submit review</button>
+        </form>
+        </section>
 
 <section id="projects">
     <h2>My Projects</h2>
@@ -539,7 +590,6 @@ button:hover{
     <p>Website for helping students learn Mathematics.</p>
 </div>
 </section>
-<img src="css/portfolio.jpg" alt="Portfolio">
 <section id="contact">
     <h2>Contact Me</h2>
 
@@ -620,6 +670,10 @@ button:hover{
   <a href="terms.html">Terms & Conditions</a>
   <a href="about.html">About</a>
   <a href="privacy.html">Privacy Policy</a>
+  <section>
+    <h2>Website Visitors</h2>
+    <h3 id="visitor">0</h3>
+</section>
     <p>© 2026 Mahbubur Rahman | All Rights Reserved</p>
 </footer>
 
@@ -768,6 +822,17 @@ function animateSkill(id, percent){
 animateSkill("htmlSkill", 95);
 animateSkill("cssSkill", 90);
 animateSkill("jsSkill", 75);
+let visitors = localStorage.getItem("visitors") || 0;
+visitors++;
+localStorage.setItem("visitors", visitors);
+
+document.getElementById("visitorCount").innerHTML = visitors;
+</script>
+<script type="module" src="firebase.js"
+let count = localStorage.getItem("visitor") || 0;
+count++;
+localStorage.setItem("visitor", count);
+document.getElementById("visitor").innerHTML = count;
 </script>
 </body>
 </html>
