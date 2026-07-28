@@ -667,14 +667,17 @@ article h2{
         <a href="algebra-chapter-2.html">Read More</a>
     </div>
 </section>
-<footer>
+
   <a href="terms.html">Terms & Conditions</a>
   <a href="about.html">About</a>
   <a href="privacy.html">Privacy Policy</a>
   <section>
     <h2>Website Visitors</h2>
-    <h3 id="visitor">0</h3>
+    
+<p><strong>Visitors:</strong> <span id="visitorCount">0</span></p>
+ 
 </section>
+<footer>
     <p>© 2026 Mahbubur Rahman | All Rights Reserved</p>
 </footer>
 
@@ -823,17 +826,11 @@ function animateSkill(id, percent){
 animateSkill("htmlSkill", 95);
 animateSkill("cssSkill", 90);
 animateSkill("jsSkill", 75);
-let visitors = localStorage.getItem("visitors") || 0;
-visitors++;
-localStorage.setItem("visitors", visitors);
-
-document.getElementById("visitorCount").innerHTML = visitors;
-</script>
-<script>
-let count = localStorage.getItem("visitor") || 0;
-count++;
-localStorage.setItem("visitor", count);
-document.getElementById("visitor").innerHTML = count;
+fetch("https://api.countapi.xyz/hit/mahbuburrahman-portfolio/visitors")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("visitorCount").innerHTML = data.value;
+  });
 </script>
 
 <script type="module" src="firebase.js"></script>
