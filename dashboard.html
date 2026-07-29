@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#0d6efd;
+color:white;
+padding:15px;
+text-align:center;
+font-size:25px;
+font-weight:bold;
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.2);
+text-align:center;
+}
+
+.card h2{
+font-size:35px;
+color:#0d6efd;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:18px;
+}
+
+.menu{
+padding:20px;
+display:grid;
+gap:10px;
+}
+
+.menu a{
+background:#198754;
+color:white;
+text-decoration:none;
+padding:15px;
+border-radius:8px;
+text-align:center;
+font-size:18px;
+}
+
+.menu a:hover{
+background:#146c43;
+}
+
+footer{
+margin-top:20px;
+background:#222;
+color:white;
+padding:15px;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+Admin Dashboard
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2 id="visitor">0</h2>
+<p>Visitors</p>
+</div>
+
+<div class="card">
+<h2 id="review">0</h2>
+<p>Reviews</p>
+</div>
+
+<div class="card">
+<h2>13</h2>
+<p>Union</p>
+</div>
+
+<div class="card">
+<h2>25</h2>
+<p>Articles</p>
+</div>
+
+</div>
+
+<div class="menu">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="#">📝 Add Article</a>
+
+<a href="#">⭐ Manage Reviews</a>
+
+<a href="#">🖼️ Photo Gallery</a>
+
+<a href="#">📢 Notice Board</a>
+
+<a href="#">⚙️ Settings</a>
+
+</div>
+
+<footer>
+© 2026 Mehendiganj Information Portal
+</footer>
+
+<script>
+document.getElementById("visitor").innerHTML =
+localStorage.getItem("visitors") || 0;
+
+document.getElementById("review").innerHTML =
+localStorage.getItem("reviews") || 0;
+</script>
+
+</body>
+</html>
