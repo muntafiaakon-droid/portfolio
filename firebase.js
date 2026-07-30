@@ -69,4 +69,4 @@ async function loadReviews() {
   });
 }
 
-loadReviews();content://com.android.externalstorage.documents/tree/primary%3ADocuments::primary:Documents/index.html /firebase.js
+loadReviews();
