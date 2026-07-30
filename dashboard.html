@@ -130,13 +130,31 @@ Admin Dashboard
 <footer>
 © 2026 Mehendiganj Information Portal
 </footer>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-<script>
-document.getElementById("visitor").innerHTML =
+const firebaseConfig = {
+  apiKey: "AIzaSyBlnMbdWW6RMAciL298LAlNeINAVI1UX7w",
+  authDomain: "mehendiganj.firebaseapp.com",
+  projectId: "mehendiganj",
+  storageBucket: "mehendiganj.firebasestorage.app",
+  messagingSenderId: "152128721453",
+  appId: "1:152128721453:web:903eeb629ed2ea6ec89ea4"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+document.getElementById("visitor").innerHTML 
 localStorage.getItem("visitors") || 0;
 
-document.getElementById("review").innerHTML =
-localStorage.getItem("reviews") || 0;
+const snap = await getDocs(collection(db, "reviews"));
+document.getElementById("review").innerHTML = snap.size;
 </script>
 
 </body>
