@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://muntafiaakon-droid.github.io/portfolio/sitemap.xml

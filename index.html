@@ -431,6 +431,59 @@ article h1{
 article h2{
     font-size: 36px;
 }
+.reviews{
+max-width:700px;
+margin:30px auto;
+padding:20px;
+}
+
+.review-summary{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+text-align:center;
+}
+
+.review-summary h3{
+font-size:35px;
+color:#0d6efd;
+margin:0;
+}
+
+.review-summary p{
+color:#666;
+margin:8px 0 15px;
+}
+
+.view-btn{
+background:#0d6efd;
+color:#fff;
+border:none;
+padding:12px 25px;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+}
+
+.review-card{
+background:#fff;
+margin-top:15px;
+padding:15px;
+border-radius:12px;
+box-shadow:0 3px 10px rgba(0,0,0,.12);
+}
+
+.review-card h4{
+margin:0;
+color:#0d6efd;
+}
+
+.stars{
+color:#FFC107;
+font-size:20px;
+margin:5px 0;
+}
 </style>
 </head>
 
@@ -541,40 +594,67 @@ article h2{
         </div>
         </section>
         <section id="testimonials" class="testimonials">
-    <h2>Student Reviews</h2>
+        <form id="reviewForm">
+    <input type="text" id="name" placeholder="আপনার নাম" required>
 
-    <div class="review">
-        <p>"স্যারের ক্লাস খুব সহজ ও সুন্দর। গণিত এখন অনেক সহজ লাগে।"</p>
-        <h4>— SSC Student</h4>
-    </div>
+    <label>Rating:</label><br>
 
-    <div class="review">
-        <p>"কুরআন শিক্ষা খুব সুন্দরভাবে বুঝিয়ে পড়ান।"</p>
-        <h4>— Quran Student</h4>
-    </div>
+    <select id="rating" required>
+        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+        <option value="⭐⭐⭐">⭐⭐⭐</option>
+        <option value="⭐⭐">⭐⭐</option>
+        <option value="⭐">⭐</option>
+    </select>
 
-    <div id="reviewList"></div>
+    <br><br>
 
-    <form id="reviewForm">
-     
-        <input type="text" id="name" placeholder="আপনার নাম" required>
-        <label>Rating:</label><br>
+    <textarea id="review" placeholder="আপনার মতামত লিখুন" required></textarea>
 
-<select id="rating" required>
-    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
-    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
-    <option value="⭐⭐⭐">⭐⭐⭐</option>
-    <option value="⭐⭐">⭐⭐</option>
-    <option value="⭐">⭐</option>
-</select>
+    <button type="submit">Submit Review</button>
+</form>
+<section class="reviews">
 
-<br><br>
+<h2>⭐ Reviews</h2>
 
-        <textarea id="review"
-        placeholder="আপনার মতামত লিখুন"required></textarea>
-        <button type="submit">Submit review</button>
-        </form>
-        </section>
+<div class="review-summary">
+<h3>4.9 ⭐⭐⭐⭐⭐</h3>
+<p>126 Reviews</p>
+
+<button onclick="toggleReviews()" class="view-btn">
+View All Reviews
+</button>
+</div>
+
+<div id="allReviews" style="display:none;">
+
+<div class="review-card">
+<h4>👤 জন</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>সুন্দর ওয়েবসাইট।</p>
+</div>
+
+<div class="review-card">
+<h4>👤 Abdur Rahman</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Good Website.</p>
+</div>
+
+<div class="review-card">
+<h4>👤 Abdullah</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>Excellent Design.</p>
+</div>
+
+<div class="review-card">
+<h4>👤 বাবু</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>খুব ভালো।</p>
+</div>
+
+</div>
+
+</section>
 
 <section id="projects">
     <h2>My Projects</h2>
@@ -670,10 +750,6 @@ article h2{
         <a href="algebra-chapter-2.html">Read More</a>
     </div>
 </section>
-
-  <a href="terms.html">Terms & Conditions</a>
-  <a href="about.html">About</a>
-  <a href="privacy.html">Privacy Policy</a>
   <section>
     <h2>Website Visitors</h2>
     
@@ -681,7 +757,12 @@ article h2{
  
 </section>
 <footer>
-    <p>© 2026 Mahbubur Rahman | All Rights Reserved</p>
+  <p>&copy; 2026 Mahbubur Rahman. All Rights Reserved.</p>
+
+  <a href="privacy.html">Privacy Policy</a> |
+  <a href="terms.html">Terms & Conditions</a> |
+  <a href="disclaimer.html">Disclaimer</a> |
+  <a href="cookies.html">Cookies Policy</a>
 </footer>
 
 <script>
@@ -837,5 +918,18 @@ fetch("https://api.countapi.xyz/hit/mahbuburrahman-portfolio/visitors")
 </script>
 
 <script type="module" src="firebase.js"></script>
+<script>
+function toggleReviews(){
+
+const reviews=document.getElementById("allReviews");
+
+if(reviews.style.display==="none"){
+reviews.style.display="block";
+}else{
+reviews.style.display="none";
+}
+
+}
+</script>
 </body>
 </html>
