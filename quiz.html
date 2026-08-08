@@ -1,32 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-
-    <link rel="stylesheet" href="quiz.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<link rel="stylesheet" href="quiz.css">
 </head>
 
 <body>
-  <body>
 
-<h1>Hello Quiz</h1>
+<h1>Quiz Test</h1>
 
-    <div class="quiz-box">
-        <h2 id="question"></h2>
+<h2 id="question"></h2>
 
-        <div id="answers"></div>
+<div id="answers"></div>
 
-        <button onclick="nextQuestion()">Next</button>
+<button onclick="nextQuestion()">Next</button>
 
-        <h3 id="result"></h3>
-    </div>
+<p id="result"></p>
 
-    <script src="quiz.js"></script>
+<script>
 
-<h1>Hello Quiz</h1>
+const quiz = [
+{
+question:"বাংলাদেশের রাজধানী কী?",
+answers:["খুলনা","বরিশাল","ঢাকা","রাজশাহী"],
+correct:2
+},
+{
+question:"HTML এর পূর্ণরূপ কী?",
+answers:[
+"Hyper Text Markup Language",
+"Home Tool Markup Language",
+"High Text Markup Language",
+"Hyper Tool Main Language"
+],
+correct:0
+},
+{
+question:"CSS কী কাজে ব্যবহার হয়?",
+answers:[
+"Design",
+"Database",
+"Programming",
+"Browser"
+],
+correct:0
+}
+];
 
-<div class="quiz-box">
+let current = 0;
+let score = 0;
+
+function loadQuestion(){
+
+document.getElementById("question").innerHTML = quiz[current].question;
+
+let html = "";
+
+quiz[current].answers.forEach((answer,index)=>{
+html += `
+<label>
+<input type="radio" name="answer" value="${index}">
+${answer}
+</label><br><br>
+`;
+});
+
+document.getElementById("answers").innerHTML = html;
+
+}
+
+function nextQuestion(){
+
+let selected = document.querySelector('input[name="answer"]:checked');
+
+if(selected && Number(selected.value) === quiz[current].correct){
+score++;
+}
+
+current++;
+
+if(current < quiz.length){
+loadQuestion();
+}else{
+document.getElementById("question").innerHTML = "Quiz শেষ!";
+document.getElementById("answers").innerHTML = "";
+document.getElementById("result").innerHTML =
+"আপনার স্কোর: " + score + " / " + quiz.length;
+
+document.querySelector("button").style.display = "none";
+}
+
+}
+
+loadQuestion();
+
+</script>
+<script src="quiz.js"></script>
 </body>
 </html>
