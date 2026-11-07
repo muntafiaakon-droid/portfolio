@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="9ldvhbasB95xxhej8xqxTkq_4NcEcjFjQkCGIJ7Smoo" />
-<title>Mahbubur Rahman | Portfolio</title>
+
+<meta name="google-site-verification" content="9ldvhbasB95xxhej8xqxTkq_4NcEcjFjQkCGIJ7Smoo">
+
+<meta name="description" content="Mahbubur Rahman - Mathematics Teacher, Quran Teacher and Web Developer. Educational articles, Mathematics learning and Quran education.">
+
+<title>Mahbubur Rahman | Teacher & Web Developer</title>
 
 <style>
+
+/* =========================
+   BASIC
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
 }
 
 html{
@@ -19,306 +28,444 @@ html{
 }
 
 body{
-    background:#f5f5f5;
+    font-family:Arial,"Noto Sans Bengali",sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.7;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#ffffff;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+    color:#087f5b;
+}
+
+.menu{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.menu a{
+    text-decoration:none;
     color:#333;
-    text-align:center;
-}
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 10px;
+    padding:8px 12px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:14px;
 }
 
-nav a{
-    width: 100px;
-    text-align: center;
-    color: #2196F3;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
+.menu a:hover{
+    background:#087f5b;
+    color:white;
 }
 
-nav a:hover{
-    color:#4CAF50;
-}
+/* =========================
+   HERO
+========================= */
+
 .hero{
-    width:90%;
-    max-width:700px;
-    margin:30px auto;
-    padding:40px 20px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.2);
-}
-.hero img{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    border:5px solid #4CAF50;
-    object-fit:cover;
-}
-.slider img{
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    border:5px solid #4CAF50;
-    transition:.5s;
+    min-height:620px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    linear-gradient(135deg,#e8fff7,#eef6ff);
+
+    padding:60px 20px;
 }
 
-.slider img:hover{
-    transform:scale(1.08);
+.hero-content{
+    max-width:1000px;
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+}
+
+.hero-text{
+    flex:1;
+    text-align:left;
+}
+
+.hero-text .welcome{
+    color:#087f5b;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.hero-text h1{
+    font-size:48px;
+    line-height:1.2;
+    margin:15px 0;
+}
+
+.hero-text h1 span{
+    color:#087f5b;
+}
+
+.hero-text p{
+    font-size:18px;
+    color:#555;
 }
 
 #typing{
+    color:#087f5b;
+    font-weight:bold;
     font-size:22px;
-    margin:15px;
-    font-weight:bold;
-    color:#4CAF50;
-}
-#clock{
-    display:inline-block;
-    background:#007bff;
-    color:white;
-    padding:12px 20px;
-    border-radius:12px;
-    font-size:28px;
-    font-weight:bold;
-    margin:20px 0;
-    box-shadow:0 4px 10px rgba(0,0,0,.2);
-}
-section{
-    width:90%;
-    max-width:700px;
-    margin:30px auto;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.2);
-}
-
-h2{
-    color:#4CAF50;
-    margin-bottom:15px;
-}
-
-button{
-    background:#4CAF50;
-    color:white;
-    padding:12px 25px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:18px;
-    margin:10px;
-}
-
-button:hover{
-    background:#2e7d32;
-}
-
-input, textarea{
-    width:90%;
-    max-width:450px;
-    padding:10px;
-    margin:10px;
-    border:1px solid #999;
-    border-radius:8px;
-}
-
-.dark{
-    background:#222;
-    color:white;
-}
-
-.dark section{
-    background:#333;
-    color:white;
-}
-
-.dark #typing{
-    color:white;
-}
-
-#topBtn{
-    display:none;
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    padding:15px;
-    border-radius:50%;
-}
-
-footer{
-    background:#222;
-    color:white;
-    padding:20px;
-    margin-top:40px;
-}
-
-h2{
-    color: #333;
-}
-
-#clock{
-    font-size: 50px;
-    color: white;
-    background: #007bff;
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-#result{
-    margin: 20px auto;
-    width: 250px;
-    padding: 15px;
-    background: #0d6efd;
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-button{
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-button:hover{
-    transform: scale(1.05);
-}
-.skill{
-    width: 90%;
-    height: 25px;
-    background: #ddd;
-    border-radius: 20px;
-    margin: 10px auto 20px;
-    overflow: hidden;
-}
-
-.fill{
-    width: 0%;
-    height: 100%;
-    background: #28a745;
-    color: white;
-    text-align: center;
-    line-height: 25px;
-    font-weight: bold;
-    border-radius: 20px;
-}
-.fill{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.fill{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: white;
-    font-weight: bold;
-}
-.project-card{
-    background:#f9f9f9;
-    border-left:5px solid #4CAF50;
-    padding:20px;
     margin:15px 0;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.15);
-    transition:0.3s;
 }
 
-.project-card:hover{
-    transform:translateY(-5px);
-}
-#contact p{
-    font-size:18px;
-    margin:12px 0;
+.hero-buttons{
+    margin-top:25px;
 }
 
-#contact strong{
-    color:#4CAF50;
-}
-.linkedin{
-    background:#0077B5;
-    color:white;
-}
-#blog{
-    padding:40px 20px;
-    background:#f8f9fa;
-}
-
-.post{
-    background:white;
-    padding:20px;
-    margin:20px auto;
-    max-width:700px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.post h3{
-    color:#0077cc;
-}
-
-.post a{
+.btn{
+    display:inline-block;
     text-decoration:none;
-    color:#009688;
+    padding:12px 22px;
+    margin:5px;
+    border-radius:30px;
     font-weight:bold;
+    background:#087f5b;
+    color:white;
+    transition:.3s;
 }
-.welcome{
-    max-width:800px;
-    margin:40px auto;
-    padding:20px;
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+.btn-outline{
+    background:white;
+    color:#087f5b;
+    border:2px solid #087f5b;
+}
+
+.profile{
+    flex:0 0 300px;
     text-align:center;
 }
 
-.welcome h2{
-    color:#0077cc;
+.profile img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 10px 35px rgba(0,0,0,.2);
 }
 
-.welcome p{
-    font-size:18px;
-    line-height:1.8;
+/* =========================
+   CLOCK
+========================= */
+
+.clock-box{
+    text-align:center;
+    padding:15px;
 }
 
-.welcome .btn{
+#clock{
     display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#0077cc;
+    background:#087f5b;
     color:white;
-    text-decoration:none;
-    border-radius:8px;
+    padding:8px 18px;
+    border-radius:25px;
+    font-weight:bold;
 }
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    max-width:1100px;
+    margin:70px auto;
+    padding:20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.section-title h2{
+    font-size:32px;
+    color:#087f5b;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 5px 25px rgba(0,0,0,.07);
+    text-align:center;
+}
+
+.about-box p{
+    font-size:18px;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    max-width:1100px;
+    margin:20px auto 70px;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.stat{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.stat h3{
+    font-size:38px;
+    color:#087f5b;
+}
+
+.stat p{
+    color:#666;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 25px rgba(0,0,0,.07);
+}
+
+.skill-item{
+    margin:20px 0;
+    text-align:left;
+}
+
+.skill-title{
+    display:flex;
+    justify-content:space-between;
+    font-weight:bold;
+}
+
+.skill{
+    height:12px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:7px;
+}
+
+.fill{
+    height:100%;
+    background:#087f5b;
+    border-radius:20px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.project-card{
+    background:white;
+    padding:28px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-7px);
+}
+
+.project-icon{
+    font-size:40px;
+}
+
+.project-card h3{
+    margin:12px 0;
+    color:#087f5b;
+}
+
+/* =========================
+   ARTICLES
+========================= */
+
+.article-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.article{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.article h3{
+    color:#087f5b;
+}
+
+.article a{
+    display:inline-block;
+    margin-top:12px;
+    text-decoration:none;
+    color:#087f5b;
+    font-weight:bold;
+}
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.certificate{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.certificate h3{
+    color:#087f5b;
+    font-size:18px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 5px 25px rgba(0,0,0,.07);
+}
+
+.contact-info{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.contact-info p{
+    margin:8px;
+}
+
+form{
+    max-width:650px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+input:focus,
+textarea:focus{
+    border-color:#087f5b;
+}
+
+form button{
+    border:none;
+    cursor:pointer;
+    padding:13px 28px;
+    background:#087f5b;
+    color:white;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* =========================
+   SOCIAL
+========================= */
+
 .social-links{
     display:flex;
     justify-content:center;
-    gap:15px;
+    gap:12px;
     flex-wrap:wrap;
-    margin-top:20px;
+    margin-top:25px;
 }
 
 .social-links a{
     text-decoration:none;
     color:white;
-    padding:10px 20px;
+    padding:10px 18px;
     border-radius:8px;
     font-weight:bold;
-    transition:0.3s;
 }
 
 .facebook{
-    background:#1877F2;
+    background:#1877f2;
 }
 
 .github{
@@ -326,656 +473,1255 @@ button:hover{
 }
 
 .linkedin{
-    background:#0A66C2;
+    background:#0a66c2;
 }
 
-.social-links a:hover{
-    transform:translateY(-3px);
-    opacity:0.9;
+.whatsapp{
+    background:#25d366;
 }
-.stats{
+
+/* =========================
+   VISITOR
+========================= */
+
+.visitor{
+    text-align:center;
+    background:#087f5b;
+    color:white;
+    padding:30px;
+    border-radius:18px;
+}
+
+.visitor h2{
+    margin-bottom:8px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111827;
+    color:white;
+    padding:35px 20px;
+    text-align:center;
+}
+
+footer a{
+    color:#9ee6cf;
+    text-decoration:none;
+    margin:0 6px;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+#topBtn{
+    display:none;
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#087f5b;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark{
+    background:#111827;
+    color:#eee;
+}
+
+.dark header,
+.dark .about-box,
+.dark .stat,
+.dark .skills-box,
+.dark .project-card,
+.dark .article,
+.dark .certificate,
+.dark .contact-box{
+    background:#1f2937;
+    color:#eee;
+}
+
+.dark .menu a{
+    color:#eee;
+}
+
+.dark .article p,
+.dark .stat p,
+.dark .section-title p{
+    color:#ccc;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .menu{
+        gap:3px;
+    }
+
+    .menu a{
+        font-size:13px;
+        padding:6px 8px;
+    }
+
+    .hero-content{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text{
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:36px;
+    }
+
+    .profile img{
+        width:210px;
+        height:210px;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .article-grid{
+        grid-template-columns:1fr;
+    }
+
+    .certificate-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        margin:45px auto;
+    }
+
+    .hero{
+        padding:45px 15px;
+    }
+
+    .profile img{
+        width:180px;
+        height:180px;
+    }
+
+    .hero-text h1{
+        font-size:30px;
+    }
+
+    #typing{
+        font-size:18px;
+    }
+
+    .certificate-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-box,
+    .skills-box,
+    .contact-box{
+        padding:22px;
+    }
+
+}
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-btn{
+    display:none;
+    border:none;
+    background:#087f5b;
+    color:white;
+    font-size:25px;
+    padding:7px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        position:relative;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:10px;
+        right:10px;
+
+        background:white;
+        padding:15px;
+
+        border-radius:12px;
+        box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+        flex-direction:column;
+        gap:5px;
+    }
+
+    .menu.show{
+        display:flex;
+    }
+
+    .menu a{
+        width:100%;
+        text-align:left;
+        padding:11px 15px;
+        border-bottom:1px solid #eee;
+    }
+
+    .dark .menu{
+        background:#1f2937;
+    }
+
+    .dark .menu a{
+        color:white;
+        border-bottom:1px solid #374151;
+    }
+
+}
+
+  /* =========================
+   SERVICES
+========================= */
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+.service-card{
+
+    background:white;
+
+    padding:32px 25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 6px 25px rgba(0,0,0,.08);
+
+    transition:
+    transform .3s,
+    box-shadow .3s;
+
+}
+
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.14);
+
+}
+
+
+.service-icon{
+
+    width:75px;
+
+    height:75px;
+
+    margin:0 auto 18px;
+
     display:flex;
+
+    align-items:center;
+
     justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin:40px 0;
+
+    background:#e8fff7;
+
+    border-radius:50%;
+
+    font-size:38px;
+
 }
 
-.stat-box{
-    width:180px;
-    background:#ffffff;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+.service-card h3{
+
+    color:#087f5b;
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
 }
 
-.stat-box h2{
-    color:#0077cc;
-    margin:0;
-    font-size:32px;
-}
 
-.stat-box p{
-    margin-top:10px;
+.service-card p{
+
+    color:#666;
+
     font-size:16px;
-}
-.certificates{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
-    text-align:center;
+
+    line-height:1.8;
+
 }
 
-.certificates h2{
-    color:#0077cc;
-    margin-bottom:25px;
+
+.service-btn{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:10px 20px;
+
+    background:#087f5b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:25px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
 }
 
-.certificate-box{
-    background:#fff;
-    margin:15px auto;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    max-width:500px;
-    transition:0.3s;
+
+.service-btn:hover{
+
+    transform:translateY(-3px);
+
 }
 
-.certificate-box:hover{
-    transform:translateY(-5px);
+
+/* Dark Mode */
+
+.dark .service-card{
+
+    background:#1f2937;
+
+    color:white;
+
 }
 
-.certificate-box h3{
-    color:#4CAF50;
-    margin-bottom:10px;
+
+.dark .service-card p{
+
+    color:#ccc;
+
 }
 
-.certificate-box p{
-    color:#555;
-}
-.testimonials{
-    max-width:900px;
-    margin:40px auto;
-    padding:20px;
-    text-align:center;
-}
 
-.review{
-    background:#fff;
-    padding:20px;
-    margin:20px auto;
-    border-left:5px solid #4CAF50;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    max-width:700px;
-}
+/* Mobile */
 
-.review h4{
-    color:#0077cc;
-    margin-top:15px;
-}
-article{
-    font-size: 20px;
-    line-height: 1.8;
-    padding: 20px;
-}
+@media(max-width:800px){
 
-article p{
-    font-size: 20px;
-}
+    .service-grid{
 
-article h1{
-    font-size: 36px;
-}
+        grid-template-columns:1fr;
 
-article h2{
-    font-size: 36px;
-}
-.reviews{
-max-width:700px;
-margin:30px auto;
-padding:20px;
-}
+    }
 
-.review-summary{
-background:#fff;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-text-align:center;
 }
-
-.review-summary h3{
-font-size:35px;
-color:#0d6efd;
-margin:0;
-}
-
-.review-summary p{
-color:#666;
-margin:8px 0 15px;
-}
-
-.view-btn{
-background:#0d6efd;
-color:#fff;
-border:none;
-padding:12px 25px;
-border-radius:30px;
-cursor:pointer;
-font-size:16px;
-}
-
-.review-card{
-background:#fff;
-margin-top:15px;
-padding:15px;
-border-radius:12px;
-box-shadow:0 3px 10px rgba(0,0,0,.12);
-}
-
-.review-card h4{
-margin:0;
-color:#0d6efd;
-}
-
-.stars{
-color:#FFC107;
-font-size:20px;
-margin:5px 0;
-}
+  
 </style>
-
+</head>
 
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="dashboard.html">Dashboard</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="blog.html">Blog</a>
-    <a href="quiz.html">quiz</a>
-    <a href="math exam 2027.html">math exam 2027</a>
-    <a href="mehendiganj.html">Mehendiganj</a>
-    <a href="AL QURAN.html">AL QURAN</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#testimonials">Reviews</a>
-    <a href="about.html">About</a>
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+📚 Mahbubur Rahman
+</div>
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<nav class="menu" id="mainMenu">
+
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="blog.html">Blog</a>
+<a href="quiz.html">Quiz</a>
+<a href="math exam 2027.html">Math Exam</a>
+<a href="mehendiganj.html">Mehendiganj</a>
+<a href="AL QURAN.html">AL QURAN</a>
+<a href="#certificates">Certificates</a>
+<a href="#contact">Contact</a>
+
 </nav>
+  
+  </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-    <img id="slider" src="image/mahbub.png" alt="Profile">
+<div class="hero-content">
 
-    <h1>Mahbubur Rahman</h1>
+<div class="hero-text">
 
-    <p id="typing"></p>
+<p class="welcome">WELCOME TO MY WEBSITE</p>
 
-    <p id="clock"></p>
+<h1>
+I'm <span>Mahbubur Rahman</span>
+</h1>
 
-    <button onclick="document.getElementById('contact').scrollIntoView()">
-        Contact Me
-    </button>
-     </section>
+<p id="typing"></p>
 
-<section class="welcome">
-    <h2>Welcome to My Educational Website</h2>
+<p>
+গণিত ও কুরআন শিক্ষার পাশাপাশি
+ওয়েব ডেভেলপমেন্ট এবং শিক্ষামূলক
+কনটেন্ট নিয়ে কাজ করছি।
+</p>
 
-    <p>
-        আমি হাফেজ মাহবুবুর রহমান। আমি গণিত ও কুরআন শিক্ষা নিয়ে কাজ করি।
-        এই ওয়েবসাইটে নবম-দশম শ্রেণির গণিত, পরীক্ষার প্রস্তুতি, গুরুত্বপূর্ণ নোট এবং শিক্ষামূলক আর্টিকেল প্রকাশ করা হয়।
-    </p>
-    <a href="#blog" class="btn">📚 সকল আর্টিকেল দেখুন</a>
+<div class="hero-buttons">
+
+<a href="#contact" class="btn">
+📩 Contact Me
+</a>
+
+<a href="about.html" class="btn btn-outline">
+👤 About Me
+</a>
+
+</div>
+
+</div>
+
+
+<div class="profile">
+
+<img src="image/mahbub.png"
+alt="Mahbubur Rahman">
+
+</div>
+
+</div>
+
 </section>
-<section class="stats">
-    <div class="stat-box">
-        <h2>10+</h2>
-        <p>Years Teaching</p>
-    </div>
 
-    <div class="stat-box">
-        <h2>1000+</h2>
-        <p>Students</p>
-    </div>
 
-    <div class="stat-box">
-        <h2>20+</h2>
-        <p>Articles</p>
-    </div>
+<!-- CLOCK -->
+
+<div class="clock-box">
+
+<span id="clock"></span>
+
+</div>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="section-title">
+
+<h2>About Me</h2>
+
+<p>Teacher • Quran Educator • Web Developer</p>
+
+</div>
+
+<div class="about-box">
+
+<p>
+আমি হাফেজ মাহবুবুর রহমান।
+আমি গণিত ও কুরআন শিক্ষা নিয়ে কাজ করি।
+দীর্ঘদিন ধরে শিক্ষার্থীদের গণিত ও কুরআন শিক্ষা দিয়ে আসছি।
+বর্তমানে শিক্ষামূলক কনটেন্ট, ওয়েবসাইট এবং অনলাইন শিক্ষার
+মাধ্যমে জ্ঞানকে আরও সহজভাবে মানুষের কাছে পৌঁছে দেওয়ার চেষ্টা করছি।
+</p>
+
+<br>
+
+<a href="about.html" class="btn">
+বিস্তারিত জানুন →
+</a>
+
+</div>
+
 </section>
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <div class="section-title">
+
+        <h2>💼 My Services</h2>
+
+        <p>
+            শিক্ষার্থী ও অনলাইন শিক্ষার্থীদের জন্য আমার সেবাসমূহ
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <!-- Mathematics -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🧮
+            </div>
+
+            <h3>
+                Mathematics Education
+            </h3>
+
+            <p>
+                নবম-দশম শ্রেণির গণিত,
+                পরীক্ষার প্রস্তুতি, গুরুত্বপূর্ণ
+                সূত্র ও অনুশীলনের মাধ্যমে
+                গণিত শেখার সহায়তা।
+            </p>
+
+            <a href="quiz.html" class="service-btn">
+                Math Quiz →
+            </a>
+
+        </div>
+
+
+        <!-- Quran -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🕌
+            </div>
+
+            <h3>
+                Quran Education
+            </h3>
+
+            <p>
+                পবিত্র কুরআন শিক্ষা,
+                হিফজ ও কুরআন সম্পর্কিত
+                শিক্ষামূলক বিষয় সহজভাবে
+                উপস্থাপন।
+            </p>
+
+            <a href="AL QURAN.html" class="service-btn">
+                Quran Section →
+            </a>
+
+        </div>
+
+
+        <!-- Web Development -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                💻
+            </div>
+
+            <h3>
+                Web Development
+            </h3>
+
+            <p>
+                HTML, CSS ও JavaScript
+                ব্যবহার করে শিক্ষামূলক
+                ও ব্যক্তিগত ওয়েবসাইট
+                তৈরির কাজ।
+            </p>
+
+            <a href="#projects" class="service-btn">
+                My Projects →
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+<div class="stat">
+<h3>10+</h3>
+<p>Years Teaching</p>
+</div>
+
+<div class="stat">
+<h3>1000+</h3>
+<p>Students</p>
+</div>
+
+<div class="stat">
+<h3>20+</h3>
+<p>Articles</p>
+</div>
+
+</div>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
 <section id="skills">
+
+<div class="section-title">
+
 <h2>My Skills</h2>
 
-<p>HTML</p>
+<p>My current learning and development skills</p>
+
+</div>
+
+<div class="skills-box">
+
+<div class="skill-item">
+
+<div class="skill-title">
+<span>HTML</span>
+<span>95%</span>
+</div>
+
 <div class="skill">
-    <div id="htmlSkill" class="fill">0%</div>
+<div class="fill" style="width:95%"></div>
 </div>
 
-<p>CSS</p>
+</div>
+
+
+<div class="skill-item">
+
+<div class="skill-title">
+<span>CSS</span>
+<span>90%</span>
+</div>
+
 <div class="skill">
-    <div id="cssSkill" class="fill">0%</div>
+<div class="fill" style="width:90%"></div>
 </div>
 
-<p>JavaScript</p>
+</div>
+
+
+<div class="skill-item">
+
+<div class="skill-title">
+<span>JavaScript</span>
+<span>75%</span>
+</div>
+
 <div class="skill">
-    <div id="jsSkill" class="fill">0%</div>
-</div>
-</section>
-<section id="certificates" class="certificates">
-    <h2>🏆 My Certificates</h2>
-
-    <div class="certificate-box">
-        <h3>M.Sc. in Mathematics</h3>
-        <p>National University</p>
-    </div>
-
-    <div class="certificate-box">
-        <h3>B.Ed.</h3>
-        <p>Professional Teacher Training</p>
-    </div>
-
-    <div class="certificate-box">
-        <h3>ICT Diploma</h3>
-        <p>One-Year Computer Training</p>
-    </div>
-
-    <div class="certificate-box">
-        <h3>Hifzul Quran</h3>
-        <p>Completed Hifz of the Holy Quran</p>
-        </div>
-        </section>
-        <section id="testimonials" class="testimonials">
-        <form id="reviewForm">
-    <input type="text" id="name" placeholder="আপনার নাম" required>
-
-    <label>Rating:</label><br>
-
-    <select id="rating" required>
-        <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
-        <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
-        <option value="⭐⭐⭐">⭐⭐⭐</option>
-        <option value="⭐⭐">⭐⭐</option>
-        <option value="⭐">⭐</option>
-    </select>
-
-    <br><br>
-
-    <textarea id="review" placeholder="আপনার মতামত লিখুন" required></textarea>
-
-    <button type="submit">Submit Review</button>
-</form>
-<section class="reviews">
-
-<h2>⭐ Reviews</h2>
-
-<div class="review-summary">
-<h3>4.9 ⭐⭐⭐⭐⭐</h3>
-<p>126 Reviews</p>
-
-<button onclick="toggleReviews()" class="view-btn">
-View All Reviews
-</button>
+<div class="fill" style="width:75%"></div>
 </div>
 
-<div id="allReviews" style="display:none;">
-
-<div class="review-card">
-<h4>👤 জন</h4>
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>সুন্দর ওয়েবসাইট।</p>
-</div>
-
-<div class="review-card">
-<h4>👤 Abdur Rahman</h4>
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>Good Website.</p>
-</div>
-
-<div class="review-card">
-<h4>👤 Abdullah</h4>
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>Excellent Design.</p>
-</div>
-
-<div class="review-card">
-<h4>👤 বাবু</h4>
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<p>খুব ভালো।</p>
 </div>
 
 </div>
 
 </section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section id="projects">
-    <h2>My Projects</h2>
 
-<div class="project-card">
-    <h3>🌐 Portfolio Website</h3>
-    <p>Personal portfolio built with HTML, CSS & JavaScript.</p>
+<div class="section-title">
+
+<h2>My Projects</h2>
+
+<p>Some of my educational and web projects</p>
+
 </div>
 
-<div class="project-card">
-    <h3>📖 Quran Learning Website</h3>
-    <p>Online platform for teaching the Holy Quran.</p>
-</div>
+
+<div class="project-grid">
+
 
 <div class="project-card">
-    <h3>📐 Math Learning Website</h3>
-    <p>Website for helping students learn Mathematics.</p>
-</div>
-</section>
-<section id="contact">
-    <h2>Contact Me</h2>
 
-    <button onclick="darkMode()">🌙 Dark Mode</button>
+<div class="project-icon">🌐</div>
 
-    <a href="image/mahbub.png" download>
-        <button>Download CV</button>
-    </a>
- 
-<a href="https://wa.me/8801775374905" target="_blank">
-    <button>WhatsApp</button>
+<h3>Portfolio Website</h3>
+
+<p>
+Personal portfolio website built with HTML,
+CSS and JavaScript.
+</p>
+
+<a href="index.html" class="btn">
+Visit
 </a>
+
+</div>
+
+
+<div class="project-card">
+
+<div class="project-icon">📖</div>
+
+<h3>Quran Learning</h3>
+
+<p>
+Online educational platform for learning
+and teaching the Holy Quran.
+</p>
+
+<a href="AL QURAN.html" class="btn">
+Explore
+</a>
+
+</div>
+
+
+<div class="project-card">
+
+<div class="project-icon">🧮</div>
+
+<h3>Math Learning</h3>
+
+<p>
+Educational resources and tools for
+school Mathematics students.
+</p>
+
+<a href="quiz.html" class="btn">
+Start Quiz
+</a>
+
+</div>
+
+
+<div class="project-card">
+
+<div class="project-icon">🚗</div>
+
+<h3>RideShare BD</h3>
+
+<p>
+A local ride-sharing project designed
+for Mehendiganj.
+</p>
+
+<a href="mehendiganj.html" class="btn">
+Explore
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ARTICLES
+========================= -->
+
+<section id="articles">
+
+<div class="section-title">
+
+<h2>Latest Articles</h2>
+
+<p>Educational and informative articles</p>
+
+</div>
+
+
+<div class="article-grid">
+
+
+<div class="article">
+
+<h3>📐 Class 9 Algebra - Chapter 1</h3>
+
+<p>
+নবম শ্রেণির বীজগণিতের মৌলিক ধারণা,
+সূত্র এবং উদাহরণ।
+</p>
+
+<a href="algebra-chapter-1.html">
+Read More →
+</a>
+
+</div>
+
+
+<div class="article">
+
+<h3>🧮 SSC Math Suggestion 2026</h3>
+
+<p>
+এসএসসি গণিত পরীক্ষার গুরুত্বপূর্ণ
+অধ্যায় ও প্রস্তুতির নির্দেশনা।
+</p>
+
+<a href="algebra-chapter-2.html">
+Read More →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div style="text-align:center;margin-top:25px;">
+
+<a href="blog.html" class="btn">
+📚 সকল Article দেখুন
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CERTIFICATES
+========================= -->
+
+<section id="certificates">
+
+<div class="section-title">
+
+<h2>🏆 Certificates & Education</h2>
+
+<p>My educational achievements</p>
+
+</div>
+
+
+<div class="certificate-grid">
+
+
+<div class="certificate">
+
+<h3>🎓 M.Sc.</h3>
+
+<p>Mathematics</p>
+
+</div>
+
+
+<div class="certificate">
+
+<h3>🎓 B.Ed.</h3>
+
+<p>Education</p>
+
+</div>
+
+
+<div class="certificate">
+
+<h3>💻 ICT Diploma</h3>
+
+<p>One-Year Computer Training</p>
+
+</div>
+
+
+<div class="certificate">
+
+<h3>🕌 Hifzul Quran</h3>
+
+<p>Holy Quran</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<div class="section-title">
+
+<h2>Contact Me</h2>
+
+<p>Feel free to contact me</p>
+
+</div>
+
+
+<div class="contact-box">
+
+<div class="contact-info">
+
 <p>📧 <strong>Email:</strong> muntafiaakon@gmail.com</p>
 
 <p>📱 <strong>Phone:</strong> +8801775374905</p>
 
 <p>📍 <strong>Location:</strong> Bangladesh</p>
 
-<form action="https://formspree.io/f/xgogkyvl" method="POST">
+</div>
 
-<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" name="email" placeholder="Your Email" required>
+<form action="https://formspree.io/f/xgogkyvl"
+method="POST">
 
-<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
 
-<button type="submit">Send Message</button>
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required>
+
+<textarea
+name="message"
+rows="5"
+placeholder="Your Message"
+required></textarea>
+
+<button type="submit">
+Send Message
+</button>
 
 </form>
-  <div class="social-links">
-    <a href="https://www.facebook.com/foujiya.foujiya" target="_blank" class="facebook">Facebook</a>
 
-    <a href="https://github.com/muntafiaakon-droid" target="_blank" class="github">GitHub</a>
 
-    <a href="https://www.linkedin.com/in/mahbubur-rahman-akon-b5a2492a1" target="_blank" class="linkedin">LinkedIn</a>
+<div class="social-links">
+
+<a class="facebook"
+href="https://www.facebook.com/foujiya.foujiya"
+target="_blank">
+Facebook
+</a>
+
+<a class="github"
+href="https://github.com/muntafiaakon-droid"
+target="_blank">
+GitHub
+</a>
+
+<a class="linkedin"
+href="https://www.linkedin.com/in/mahbubur-rahman-akon-b5a2492a1"
+target="_blank">
+LinkedIn
+</a>
+
+<a class="whatsapp"
+href="https://wa.me/8801775374905"
+target="_blank">
+WhatsApp
+</a>
+
 </div>
+
+</div>
+
 </section>
-<h2 id="quote">Click the button</h2>
-<button onclick="newQuote()">New Quote</button>
-<button onclick="welcome()">say hello</button>
-<textarea id="note" rows="6" cols="30"></textarea>
-<br>
-<button onclick="saveNote()">Save</button>
-  <input type="number" id="num">
-<br><br>
-<button onclick="square()">x²</button>
-<button onclick="sqrt()">√x</button>
-<input type="number" id="num1" placeholder="First Number">
-<br><br>
 
-<input type="number" id="num2" placeholder="Second Number">
-<br><br>
 
-<button onclick="add()">+</button>
-<button onclick="sub()">-</button>
-<button onclick="mul()">×</button>
-<button onclick="div()">÷</button>
+<!-- =========================
+     VISITORS
+========================= -->
 
-<h2 id="result"></h2>
-  
-<button id="topBtn" onclick="topFunction()">⬆️</button>
-<section id="blog">
-    <h2>Latest Articles</h2>
+<section>
 
-    <div class="post">
-        <h3>Class 9 Algebra - Chapter 1</h3>
-        <p>এই আর্টিকেলে নবম শ্রেণির বীজগণিতের মৌলিক ধারণা, সূত্র এবং উদাহরণ আলোচনা করা হয়েছে।</p>
-        <a href="algebra-chapter-1.html">Read More</a>
-    </div>
+<div class="visitor">
 
-    <div class="post">
-        <h3>SSC Math Suggestion 2026</h3>
-        <p>এসএসসি গণিত পরীক্ষার গুরুত্বপূর্ণ অধ্যায় ও প্রস্তুতির নির্দেশনা।</p>
-        <a href="algebra-chapter-2.html">Read More</a>
-    </div>
+<h2>🌐 Website Visitors</h2>
+
+<p>
+
+<strong id="visitorCount">0</strong>
+
+Visitors
+
+</p>
+
+</div>
+
 </section>
-  <section>
-    <h2>Website Visitors</h2>
-    
-<p><strong>Visitors:</strong> <span id="visitorCount">0</span></p>
- 
-</section>
+
+
+<!-- =========================
+     DARK MODE
+========================= -->
+
+<div style="text-align:center;margin:20px;">
+
+<button
+onclick="darkMode()"
+class="btn"
+style="border:none;cursor:pointer;">
+
+🌙 Dark Mode
+
+</button>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  <p>&copy; 2026 Mahbubur Rahman. All Rights Reserved.</p>
 
-  <a href="privacy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms & Conditions</a> |
-  <a href="disclaimer.html">Disclaimer</a> |
-  <a href="cookies.html">Cookies Policy</a>
+<p>
+© 2026 Mahbubur Rahman.
+All Rights Reserved.
+</p>
+
+<br>
+
+<a href="privacy.html">Privacy Policy</a>
+
+<a href="terms.html">Terms & Conditions</a>
+
+<a href="disclaimer.html">Disclaimer</a>
+
+<a href="cookies.html">Cookies Policy</a>
+
 </footer>
+
+
+<!-- TOP BUTTON -->
+
+<button id="topBtn"
+onclick="topFunction()">
+⬆️
+</button>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-// Typing Animation
-const text = "Mathematics Teacher | Quran Teacher | Web Developer";
+/* Typing Animation */
+
+const text =
+"Mathematics Teacher | Quran Teacher | Web Developer";
+
 let i = 0;
 
 function typeWriter(){
-    if(i < text.length){
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter,80);
-    }
+
+if(i < text.length){
+
+document.getElementById("typing").innerHTML
++= text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,70);
+
 }
+
+}
+
 typeWriter();
 
-// Live Clock
+
+/* Clock */
+
 function showClock(){
-    let now = new Date();
-   document.getElementById("clock").innerHTML =
-now.toLocaleDateString() + " " + now.toLocaleTimeString();
+
+const now = new Date();
+
+document.getElementById("clock").innerHTML =
+now.toLocaleDateString("bn-BD")
++
+" | "
++
+now.toLocaleTimeString("bn-BD");
+
 }
-setInterval(showClock,1000);
+
 showClock();
 
-// Dark Mode
+setInterval(showClock,1000);
+
+
+/* Dark Mode */
+
 function darkMode(){
-    document.body.classList.toggle("dark");
+
+document.body.classList.toggle("dark");
+
 }
 
-// Form Validation
 
-// Scroll To Top
+/* Back To Top */
+
 window.onscroll = function(){
-    if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
-        document.getElementById("topBtn").style.display = "block";
-    }else{
-        document.getElementById("topBtn").style.display = "none";
-    }
+
+if(
+document.body.scrollTop > 300 ||
+document.documentElement.scrollTop > 300
+){
+
+document.getElementById("topBtn")
+.style.display="block";
+
+}else{
+
+document.getElementById("topBtn")
+.style.display="none";
+
+}
+
 };
+
 
 function topFunction(){
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+
+/* Visitor Counter */
+
+fetch(
+"https://api.countapi.xyz/hit/mahbuburrahman-portfolio/visitors"
+)
+
+.then(res => res.json())
+
+.then(data => {
+
+document.getElementById("visitorCount")
+.innerHTML=data.value;
+
+})
+
+.catch(error => {
+
+document.getElementById("visitorCount")
+.innerHTML="";
+
+});
+  /* Mobile Menu */
+
+function toggleMenu(){
+
+    const menu = document.getElementById("mainMenu");
+
+    menu.classList.toggle("show");
+
+}
+
+
+/* Menu link চাপলে Menu বন্ধ হবে */
+
+document.querySelectorAll("#mainMenu a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document.getElementById("mainMenu")
+        .classList.remove("show");
+
     });
-}
 
-// Image Slider
-let images = [
-    
-    "image/mahbub.png"
-];
-
-let index = 0;
-
-setInterval(function(){
-    index++;
-    if(index >= images.length){
-        index = 0;
-    }
-    document.getElementById("slider").src = images[index];
-},3000);
+});
 
 </script>
 
-<script>
-function welcome() {
-  alert("Welcome to My Portfolio");
-}
-let quotes = [
-  "Never give up.",
-  "Success needs hard work.",
-  "Practice makes perfect.",
-  "Believe in yourself."
-];
-
-function newQuote() {
-  let random = Math.floor(Math.random() * quotes.length);
-  document.getElementById("quote").innerHTML = quotes[random];
-}
-document.getElementById("note").value =
-localStorage.getItem("note") || "";
-
-function saveNote() {
-  localStorage.setItem(
-    "note",
-    document.getElementById("note").value
-  );
-  alert("Note Saved!");
-}
-function square() {
-  let n = Number(document.getElementById("num").value);
-  document.getElementById("result").innerHTML = n * n;
-}
-
-function sqrt() {
-  let n = Number(document.getElementById("num").value);
-  document.getElementById("result").innerHTML = Math.sqrt(n);
-}
-function add() {
-  let a = Number(document.getElementById("num1").value);
-  let b = Number(document.getElementById("num2").value);
-  document.getElementById("result").innerHTML = "Result = " + (a + b);
-}
-
-function sub() {
-  let a = Number(document.getElementById("num1").value);
-  let b = Number(document.getElementById("num2").value);
-  document.getElementById("result").innerHTML = "Result = " + (a - b);
-}
-
-function mul() {
-  let a = Number(document.getElementById("num1").value);
-  let b = Number(document.getElementById("num2").value);
-  document.getElementById("result").innerHTML = "Result = " + (a * b);
-}
-
-function div() {
-  let a = Number(document.getElementById("num1").value);
-  let b = Number(document.getElementById("num2").value);
-
-  if (b === 0) {
-    document.getElementById("result").innerHTML = "০ দিয়ে ভাগ করা যায় না";
-  } else {
-    document.getElementById("result").innerHTML = "Result = " + (a / b);
-  }
-}
-function animateSkill(id, percent){
-    let value = 0;
-    let bar = document.getElementById(id);
-
-    let interval = setInterval(function(){
-        if(value >= percent){
-            clearInterval(interval);
-        }else{
-            value++;
-            bar.style.width = value + "%";
-            bar.innerHTML = value + "%";
-        }
-    }, 20);
-}
-
-animateSkill("htmlSkill", 95);
-animateSkill("cssSkill", 90);
-animateSkill("jsSkill", 75);
-fetch("https://api.countapi.xyz/hit/mahbuburrahman-portfolio/visitors")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("visitorCount").innerHTML = data.value;
-  });
-</script>
-
-<script type="module" src="firebase.js"></script>
-<script>
-function toggleReviews(){
-
-const reviews=document.getElementById("allReviews");
-
-if(reviews.style.display==="none"){
-reviews.style.display="block";
-}else{
-reviews.style.display="none";
-}
-
-}
-</script>
-<script>
-let name = "Mahbubur Rahman";
-const country = "Bangladesh";
-
-document.write(name);
-document.write("<br>");
-document.write(country);
-</script>
-<script>
-function salam() {
-    alert("আসসালামু আলাইকুম");
-}
-
-salam();
-</script>
-<script>
-let mark = 80;
-
-if (mark >= 80) {
-    document.write("Grade A+");
-}
-</script>
-<script>
-let fruits = ["Apple", "Mango", "Banana"];
-
-document.write(fruits[0]);
-document.write("<br>");
-document.write(fruits[1]);
-</script>
-<script>
-for (let i = 1; i <= 5; i++) {
-    document.write("সংখ্যা: " + i + "<br>");
-}
-</script>
-<script>
-let i = 1;
-
-while (i <= 5) {
-    document.write(i + "<br>");
-    i++;
-}
-</script>
-<script>
-let student = {
-    name: "Mahbub",
-    age: 38,
-    country: "Bangladesh"
-};
-
-document.write(student.name + "<br>");
-document.write(student.age + "<br>");
-document.write(student.country);
-</script>
 </body>
 </html>
